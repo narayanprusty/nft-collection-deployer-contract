@@ -1,13 +1,24 @@
-# Sample Hardhat Project
+# Collection Deployer Contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## Compile and Test Contracts
+To test the contracts, run the following commands:
 
-Try running some of the following tasks:
+```
+npm install
+npx hardhat test
+```
+
+## Deploy Contracts
+
+To deploy the contracts on a local ganache network you need to first run ganache:
+
+```
+ganache --port 8545 -h=0.0.0.0 -m="rifle cloud amused end pyramid swarm anxiety kitchen ceiling cotton rib gain"
+```
+
+Then run the following command to deploy the contract:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+cp .env.example .env
+npx hardhat --network localhost deploy --tags deploy
 ```
