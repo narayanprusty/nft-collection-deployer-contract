@@ -5,6 +5,8 @@ To test the contracts, run the following commands:
 
 ```
 npm install
+cp .env.example .env
+
 npx hardhat test
 ```
 
